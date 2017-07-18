@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#A6C891"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/princiaplVista"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/bitcoinPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text=" 1 BTC = 0 MXN"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/bitsoWidgetLogo"
+            android:layout_width="245dp"
+            android:layout_height="27dp"
+            android:layout_above="@+id/bitcoinPrincipal"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bitsologo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/minimoWidgetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Minimo = 0 MXN"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/maximoWidgetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text=" Maximo = 0 MXN"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</LinearLayout>

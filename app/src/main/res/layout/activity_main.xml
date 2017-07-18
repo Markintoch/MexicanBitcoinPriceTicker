@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.imt99.mexicanbitcoinpriceticker.MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/labelTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:layout_margin="20dp"
+                android:text="Bitso Widget Price Ticker"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelTitle">
+
+            <ImageView
+                android:id="@+id/bitsoLogo"
+                android:layout_width="245dp"
+                android:layout_height="35dp"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bitsologo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bitcoinLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageLabel">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/precioActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+                    android:text="1 BTC = 0 MXN"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/labelMinMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bitcoinLabel">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="70dp">
+
+                <TextView
+                    android:id="@+id/minimoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Minimo:"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/maximoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Maximo:"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/labelValuesMinMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelMinMax">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="50dp">
+
+                <TextView
+                    android:id="@+id/minimoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="0 MXN"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/maximoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0 MXN"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/labelAskBid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelValuesMinMax">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="35dp">
+
+                <TextView
+                    android:id="@+id/askLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Compra Bitcoin a:"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bidLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Vende Bitcoin a: "
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/labelValuesAskBid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelMinMax">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="45dp">
+
+                <TextView
+                    android:id="@+id/askValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="0 MXN"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bidValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0 MXN"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelValuesAskBid">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" *Los valores de compra y venta son los de demanda actual, evitando el proceso de trading* "
+                android:textSize="12dp"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="center"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
