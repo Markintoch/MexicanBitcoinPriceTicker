@@ -2,9 +2,7 @@ package com.example.imt99.mexicanbitcoinpriceticker;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.os.IBinder;
 import android.support.annotation.Nullable;
-
 import java.util.Timer;
 import java.util.TimerTask;
 

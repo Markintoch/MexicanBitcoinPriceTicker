@@ -7,9 +7,7 @@ import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.RemoteViews;
-
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -60,8 +58,6 @@ public class BitsoJSON extends AsyncTask<Object,Context,JSONObject>{
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
         Notification notificacion = contruccionNotificacion.build();
         notificacion .flags = Notification.FLAG_NO_CLEAR;
-        //notificacion.bigContentView = bitsoWidget;
-        //notificacion.flags = Notification.FLAG_ONGOING_EVENT;
         try{
             Log.i("Run","Se a actualizado el valor");
             String precioReciente = String.valueOf(bitcoinJSON.getJSONObject("payload").getString("last"));

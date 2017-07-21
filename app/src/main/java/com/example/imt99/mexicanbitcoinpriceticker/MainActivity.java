@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,14 +32,18 @@ public class MainActivity extends AppCompatActivity {
         precioActual = (TextView) findViewById(R.id.precioActual);
         compra = (TextView) findViewById(R.id.askValue);
         venta = (TextView) findViewById(R.id.bidValue);
-        startService(new Intent(this,WidgetService.class));
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-8043603209068675~3544848145");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        startService(new Intent(this,WidgetService.class)); //Inicia el servicio del widget
     }
 
-    public static Context getAppContext(){
+    public static Context getAppContext(){ // Returna el contexto global de la aplicacion
         return contexto;
     }
 
-    public static void setMinValor(String valor) {
+    public static void setMinValor(String valor) { //Permite acceder a los items ID desde una clase externa
         minimo.setText(valor + " MXN");
     }
 
